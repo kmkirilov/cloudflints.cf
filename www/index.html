@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<!--the header is used for loading all external resources before the main content-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' *; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    <title></title>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCufJBM-6w0uYLjXtSHQW7BawJEsB4i8o"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+
+    <style type="text/css">
+        .platform-ios .manual-ios-statusbar-padding {
+            padding-top: 20px;
+        }
+        
+        .manual-remove-top-padding {
+            padding-top: 0px;
+        }
+        
+        .manual-remove-top-padding .scroll {
+            padding-top: 0px !important;
+        }
+        
+        ion-list.manual-list-fullwidth div.list,
+        .list.card.manual-card-fullwidth {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        ion-list.manual-list-fullwidth div.list > .item,
+        .list.card.manual-card-fullwidth > .item {
+            border-radius: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+    </style>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+</head>
+
+<body ng-app="app" animation="slide-left-right-ios7">
+    <div style="">
+        <ion-side-menus data-componentid="side-menu21" style="" enable-menu-with-back-views="false">
+            <ion-pane ion-side-menu-content="" drag-content="false">
+                <ion-side-menu-content>
+                    <ion-nav-bar class="bar-stable">
+                        <ion-nav-back-button></ion-nav-back-button>
+                        <ion-nav-buttons side="left">
+                            <button class="button button-icon button-clear ion-ios-information-outline" menu-toggle="left"></button>
+                        </ion-nav-buttons>
+                    </ion-nav-bar>
+                    <ion-nav-view></ion-nav-view>
+                </ion-side-menu-content>
+                <ion-side-menu style="background-color:#DAE2FE;" side="left" id="side-menu21" drag-content="false">
+                    <ion-header-bar class="bar-stable">
+                        <div class="title">About</div>
+                    </ion-header-bar>
+                    <ion-content padding="false" class="side-menu-left has-header">
+                        <div class="university-logo" style="text-align:center">
+                            <h3>GPS Bus Tracker</h3>
+                            <img src="img/st-andrews-logo.png" alt="" style="width:30%">
+                        </div>
+                        <div class="item item-text-wrap">
+                            <p class="">
+                                This project is developed to showcase the benefits of integrating live GPS data in the freely available information, provided to passengers. The unavailable live GPS feed from the bus companies is simulated by collecting data about the device's geolocation while on a bus and using it as a data source for the trace of the bus.
+                                <br>
+                                <br>
+                                <span style="color:#a6a6a6">&copy; Kiril Kirilov kirilov.mnt@gmail.com</span>
+                            </p>
+                        </div>
+                    </ion-content>
+                </ion-side-menu>
+            </ion-pane>
+        </ion-side-menus>
+    </div>
+</body>
+
+</html>
